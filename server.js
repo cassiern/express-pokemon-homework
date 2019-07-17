@@ -6,11 +6,10 @@ const app = express();
 
 const pokemon = require('./pokemon.js')
 app.get('/pokemon', (req, res) => {
-	res.send(pokemon);
-	// res.render('./index.ejs', {
-	// 		Pokemon: pokemon
+	res.render('./index.ejs', {
+			Pokemon: pokemon
 		})
-//})
+})
 
 app.get('/pokemon/:index', (req, res) => {
 	res.render('./show.ejs', {
