@@ -1,4 +1,17 @@
 
 body {
-background-color: orange;
+background-color: #e6ecf5;
+font-family: 'Barriecito', cursive;
+font-family: 'Roboto Mono', monospace;
+padding: 10px;
+font-size: 20px;
 }
+
+li {
+	color: #e89d13;
+}
+
+
+
+
+
