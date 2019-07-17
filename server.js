@@ -1,8 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const serveStatic = require('serve-static')
 // If you need to delete something 
 //const methodOverride = require('method-override');
+
+app.use(express.static('public'));
+
+
+
 
 const pokemon = require('./pokemon.js')
 app.get('/pokemon', (req, res) => {
