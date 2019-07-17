@@ -7,9 +7,9 @@
 </head>
 <body>
 	<ul class="pokemon">
-<%Pokemon.forEach(function(pokemon, index){%>
-	<a href="/pokemon/<%=index%>">
-		<li><%index%><%=pokemon.name%></li>
+<%Pokemon.forEach(function(pokemon, id){%>
+	<a href="/pokemon/<%=id%>">
+		<li><%id%><%=pokemon.name%></li>
 	</a>
 <%});%>
 </ul>

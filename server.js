@@ -11,9 +11,9 @@ app.get('/pokemon', (req, res) => {
 		})
 })
 
-app.get('/pokemon/:index', (req, res) => {
+app.get('/pokemon/:id', (req, res) => {
 	res.render('./show.ejs', {
-		eachPokemon: pokemon[req.params.index]
+		eachPokemon: pokemon[req.params.id]
 	})
 });
 
