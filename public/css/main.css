@@ -22,6 +22,8 @@ li:hover {
 
 h1 {
 	font-family: 'Shadows Into Light', cursive;
+	background-color: rgb(255, 175, 10, .5);
+	border-radius: 12px;
 }
 
 h3 {
