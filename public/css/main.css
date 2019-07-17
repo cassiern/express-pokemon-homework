@@ -1,5 +1,7 @@
 
 body {
+text-align: center;
+
 background-color: #e6ecf5;
 font-family: 'Barriecito', cursive;
 font-family: 'Roboto Mono', monospace;
@@ -8,10 +10,22 @@ font-size: 20px;
 }
 
 li {
+	list-style: none;
 	color: #e89d13;
+	padding: 10px;
 }
 
 
+li:hover {
+	color: black;
+}
 
+h1 {
+	font-family: 'Shadows Into Light', cursive;
+}
+
+h3 {
+	font-family: 'Shadows Into Light', cursive;
+}
 
 

@@ -4,13 +4,17 @@
 	<title></title>
 	<link rel='stylesheet' type='text/css' href='/css/main.css' >
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
 </head>
 <body>
+	<h1>Pick your Pokemon</h1>
 	<ul class="pokemon">
 <%Pokemon.forEach(function(pokemon, id){%>
 	<a href="/pokemon/<%=id%>">
 		<li><%id%><%=pokemon.name%></li>
 	</a>
+	
 <%});%>
 </ul>
 
