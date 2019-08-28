@@ -7,10 +7,11 @@
 
 
   <h1>Edit Pokemon Page</h1>
-        <form method="POST" action="/pokemon/<%=index%>?_method=PUT">
+        <form method="POST" action="/pokemon/<%=id%>?_method=PUT">
         
         Name: 
-        <input type="text" name="name" value="<%=eachPokemon.name%>"/><br/>
+        <input type="text" name="name" value="<%=pokemon.name%>"/><br/>
+        <input type="text" name="img" value="<%=pokemon.img%>"/><br>
 
 
 

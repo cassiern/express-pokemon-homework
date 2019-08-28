@@ -7,18 +7,18 @@
 
 <h1>Create a New Pokemon</h1>
 
+
 <form action="/pokemon" method="POST">
+	Pick your Pokemon:
+	<input type="text" name="img" id="nameInput" /><br>
+	<br>
 	Name:
-	<input type="text" name="name" /><br>
-	<input type="submit" name="" value="Create pokemon">
+	<input type="text" name="name"/><br>
+	<img src="" id="imgTag">
+	<input type="submit" name="" value="Create pokemon">	
 </form>
 
-
-
-
-
-
-
-
+<button id="findImg" onClick="findImage()">Find Image</button><br>
+<script src="/js/app.js"></script>
 </body>
 </html>

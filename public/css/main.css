@@ -1,7 +1,16 @@
+/*.container {
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+	grid-column-gap: 1em;
+	grid-row-gap: 1em;
+	grid-auto-rows: 200px;
+	grid-auto-rows: minmax(10px, auto)
+	border: 1px solid black;
+}*/
+
 
 body {
 text-align: center;
-
 background-color: #e6ecf5;
 font-family: 'Barriecito', cursive;
 font-family: 'Roboto Mono', monospace;

@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const methodOverride = require('method-override');
 const serveStatic = require('serve-static')
-const Pokemon = require('./models/pokemon')
+let Pokemon = require('./models/pokemon')
 // If you need to delete something 
 //const methodOverride = require('method-override');
 app.use(bodyParser.urlencoded({extended: false}));
@@ -12,7 +12,7 @@ app.use(methodOverride('_method'))
 
 
 //index route
-const pokemon = require('./models/pokemon.js')
+//const pokemon = require('./models/pokemon.js')
 app.get('/pokemon', (req, res) => {
 	res.render('index.ejs', {
 			pokemon: Pokemon
@@ -31,22 +31,26 @@ app.get('/pokemon/new', (req,res) => {
 //show route
 app.get('/pokemon/:id', (req, res) => {
 	 res.render('show.ejs', {
-	 	eachPokemon: Pokemon[req.params.id]
+	 	eachPokemon: Pokemon[req.params.id],
+	 	pokemon: Pokemon,
+	 	id: req.params.id
 	 })
 });
 
 //edit route
-app.get('/pokemon/:id/edit',(req, res)=> {
+app.get('/pokemon/:id/edit', (req, res)=> {
 	res.render('edit.ejs', {
-		eachPokemon: Pokemon[req.params.id],
-		index: req.params.id
+		pokemon: Pokemon[req.params.id],
+		id: req.params.id
 	})
-})
-app.put('/pokemon/:id', (req, res) => {
-	Pokemon[req.params.id].name = req.body.name
-	res.redirect('/pokemon')
+	console.log(Pokemon[req.params.id], ' <-- pokemon to edit');
 })
 
+app.put('/pokemon/:id', (req, res) => {
+	Pokemon[req.params.id] = req.body;
+	console.log(req.body, " <-- req.body");
+	res.redirect('/pokemon');
+})
 
 
 //delete route
